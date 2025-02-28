@@ -34,11 +34,52 @@ Encapsulation helps us in data hiding ---> we can make a attribute private and
 
 */
 
+/*
+Constructor : It gets automatically at the time of object creation.
+It is only called once at the time of object creation.
+constructor should also be made public since it is being called by main function.
+When the class (Blue print) is made at that time as such no space is allocated 
+the main space is allocated during the time of object creation.
+
+Memory allocation happens when constructor is called
+
+Constructor has 3 types:
+
+1. Non Parameterized Constructor
+2. Parameterized Constructor
+3. Copy Constructor
+*/
+
+class Account{
+private:
+    double balance;
+    string password; // data hiding is getting implemented here using Encapsulation
+public:
+    string accID;
+    string username;
+};
 
 class Teacher{
 private:
     double salary;
 public:
+    // We can have both the constructor 
+    // Just we should have either number of parameters different
+    // or the datatype of the parameters should be different
+    // Having these 2 type of Constructor is called "Constructor Overloading"
+    // Constructor Overloading is an example of polymorphism
+
+    // Non Parameterized Constructor
+    Teacher(){
+        dept = "Computer Science";
+    } 
+    // Parameterized Constructor
+    Teacher(string name,string dept,string subject,double salary){
+        this->name = name;
+        this->dept = dept;
+        this->subject = subject;
+        this->salary = salary;
+    }
     // properties or attributes
     string name;
     string dept;
@@ -58,24 +99,15 @@ public:
     double GetSalary(){
         return salary;
     }
-};
-
-
-class Account{
-private:
-    double balance;
-    string password; // data hiding is getting implemented here using Encapsulation
-public:
-    string accID;
-    string username;
+    void getInfo(){
+        cout<<"Name: "<< name<<" Subject: "<<subject;
+    }
 };
 
 
 int main(){
-    Teacher t1; 
-    t1.name = "Kishan";
-    t1.subject = "CPP";
-    t1.SetSalary(25000);
-    cout<<t1.GetSalary()<<endl;
+    Teacher t1("Kishan","CS","OOPs",25000);
+    t1.getInfo();
+
     return 0;
 }
