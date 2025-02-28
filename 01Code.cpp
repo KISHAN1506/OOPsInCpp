@@ -17,6 +17,23 @@ Access Modifiers :
 3.protected : data and members accessible inside the class and to its derivative class
 */
 
+/*
+4 major pillars in OOPs:
+
+1.Encapsulation
+2.Abstraction
+3.Inheritance
+4.Polymorphism
+
+*/
+
+/* 
+Encapsulation: Encapsulation is wrapping up of data and member functions in a single unit class called class.
+
+Encapsulation helps us in data hiding ---> we can make a attribute private and 
+
+*/
+
 
 class Teacher{
 private:
@@ -44,11 +61,21 @@ public:
 };
 
 
+class Account{
+private:
+    double balance;
+    string password; // data hiding is getting implemented here using Encapsulation
+public:
+    string accID;
+    string username;
+};
+
+
 int main(){
     Teacher t1; 
     t1.name = "Kishan";
     t1.subject = "CPP";
     t1.SetSalary(25000);
-    cout<<t1.GetSalary();
+    cout<<t1.GetSalary()<<endl;
     return 0;
 }
