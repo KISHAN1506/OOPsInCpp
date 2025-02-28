@@ -74,6 +74,9 @@ public:
         dept = "Computer Science";
     } 
     // Parameterized Constructor
+
+    //  this is a pointer which points towards the memory location where the object is created
+    // *(this).prop == this->prop
     Teacher(string name,string dept,string subject,double salary){
         this->name = name;
         this->dept = dept;
