@@ -70,9 +70,20 @@ public:
     // Constructor Overloading is an example of polymorphism
 
     // Non Parameterized Constructor
-    Teacher(){
-        dept = "Computer Science";
-    } 
+    // Teacher(){
+    //     dept = "Computer Science";
+    // } 
+
+    // Copy Constructor
+    Teacher(Teacher &obj){ // pass by reference
+        cout<<"I am custom copy constructor"<<endl;
+        this->name = obj.name;
+        this->dept = obj.dept;
+        this->subject = obj.subject;
+        this->salary = obj.salary;
+
+    }
+
     // Parameterized Constructor
 
     //  this is a pointer which points towards the memory location where the object is created
@@ -103,7 +114,7 @@ public:
         return salary;
     }
     void getInfo(){
-        cout<<"Name: "<< name<<" Subject: "<<subject;
+        cout<<"Name: "<< name<<endl<<"Subject: "<<subject<<endl;
     }
 };
 
@@ -112,5 +123,8 @@ int main(){
     Teacher t1("Kishan","CS","OOPs",25000);
     t1.getInfo();
 
+    // Teacher t2(t1); // default copy constructor invoked
+    Teacher t2(t1); // Custom copy constructor invoked
+    t2.getInfo();
     return 0;
 }
