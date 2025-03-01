@@ -5,6 +5,21 @@ using namespace std;
 // Inheritance is mainly for code reusability
 // while creating a student class, first the constructor of base class is called then of derived class
 
+
+
+/*
+
++-------------+----------------------------+---------------------+-------------+
+|                             | Derived Class | Derived Class  | Derived Class |
+| Base Class / Parent Class   | Private Mode  | Protected Mode | Public Mode   |
++-------------+---------------+----------------+-------------+
+| Private                     | Not Inherited | Not Inherited  | Not Inherited |
+| Protected                   | Private       | Protected      | Protected     |
+| Public                      | Private       | Protected      | Public        |
++-------------+----------------------------+---------------------+-------------+
+
+
+*/
 class Person{
 public:
     string name;
