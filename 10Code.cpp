@@ -1,28 +1,27 @@
 #include <iostream>
 using namespace std;
 
-/*
-Abstract Classes:
-
-1. Abstract classes are used to provide a base class from which other classes can be derived.
-2. They cannot be instantiated(their object cannot be made) and are meant to be inherited.
-3. Abstract classes are typically used to define an interface for derived classes.
-*/
-
-
-class Shape{ // abstract class
-    virtual void draw() = 0; // pure virtual function
+void fun(){
+    // initial statement runs only 1 time then upon calls done next time it does not execute
+    static int x = 0;
+    cout<<"x: "<<x<<endl;
+    x++;
 };
 
-class Circle : public Shape{
+class ABC {
     public:
-    void draw(){
-        cout<<"Drawing a circle";
+    ABC(){
+        cout<<"Constructor"<<endl;
+    }
+    ~ABC(){
+        cout<<"Dectructor"<<endl;
     }
 };
 
 int main(){
-    Circle c1;
-    c1.draw();
+    if(true){
+        static ABC a1;
+    }
+    cout<<"Prog end\n";
     return 0;
 }
