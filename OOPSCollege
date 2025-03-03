@@ -1,0 +1,43 @@
+// You are using GCC
+#include <iostream>
+using namespace std;
+
+class Person{
+public:
+    string name;
+    string dob;
+    string email;
+    int phone;
+    string gender;
+    
+    Person(string name,string dob,string email,int phone,string gender){
+        this->name = name;
+        this->dob = dob;
+        this->email = email;
+        this->phone = phone;
+        this->gender = gender;
+    }
+};
+
+class Student:public Person{
+public:
+    int reg_no;
+    float marks1;
+    float marks2;
+    float marks3;
+    void avrgggg(){
+        float avrgg = (marks1 + marks2 + marks3)/3.0;
+        cout<<avrgg<<endl;
+    }
+    Student(string name,string dob,string email,int phone,string gender,int reg_no,float marks1,float marks2,float marks3):Person(name,dob,email,phone,gender){
+        this->reg_no = reg_no;
+        this->marks1 = marks1;
+        this->marks2 = marks2;
+        this->marks3 = marks3;
+    }
+};
+
+int main(){
+    Student s1("Kishan","15/06/2006","kishan@gmail.com",6355,"M",24111,85,74,89);
+    cout<<s1.name;
+}
