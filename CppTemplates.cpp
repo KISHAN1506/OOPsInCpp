@@ -31,30 +31,30 @@ class vectorr{
 };
 
 int main(){
-    // vectorr v1(3);
-    // v1.arr[0] = 4;
-    // v1.arr[1] = 3;
-    // v1.arr[2] = 1;
-    // vectorr v2(3);
-    // v2.arr[0] = 1;
-    // v2.arr[1] = 0;
-    // v2.arr[2] = 1;
+    vectorr<int> v1(3);
+    v1.arr[0] = 4;
+    v1.arr[1] = 3;
+    v1.arr[2] = 1;
+    vectorr<int> v2(3);
+    v2.arr[0] = 1;
+    v2.arr[1] = 0;
+    v2.arr[2] = 1;
 
-    // int ans = v1.dotProduct(v2);
-    // cout<<ans<<endl;
+    int ans = v1.dotProduct(v2);
+    cout<<ans<<endl;
 
     
-    vectorr<float> v1(3);
-    v1.arr[0] = 4.2;
-    v1.arr[1] = 3.2;
-    v1.arr[2] = 1.2;
-    vectorr<float> v2(3);
-    v2.arr[0] = 1.2;
-    v2.arr[1] = 0.2;
-    v2.arr[2] = 1.2;
+    vectorr<float> v3(3);
+    v3.arr[0] = 4.2;
+    v3.arr[1] = 3.2;
+    v3.arr[2] = 1.2;
+    vectorr<float> v4(3);
+    v4.arr[0] = 1.2;
+    v4.arr[1] = 0.2;
+    v4.arr[2] = 1.2;
 
-    float ans = v1.dotProduct(v2);
-    cout<<ans<<endl;
+    float ans2 = v3.dotProduct(v4);
+    cout<<ans2<<endl;
 
 
     return 0;
